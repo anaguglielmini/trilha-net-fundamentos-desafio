@@ -21,9 +21,9 @@ namespace DesafioFundamentos.Models
 
         public void RemoverVeiculo()
         {            
-            // Verifica se há veículos a serem removidos           
-            if (veiculos.Any())
+            switch(veiculos.Any())
             {
+                case true:
                 Console.WriteLine("Digite a placa do veículo para remover:");
 
                 // Implementado!
@@ -43,18 +43,19 @@ namespace DesafioFundamentos.Models
                         valorTotal = precoInicial + precoPorHora * horas;
 
                         // Implementado!
-                        Console.WriteLine($"O veículo {placa} foi removido e o preço total foi de: R$ {valorTotal}");
+                        Console.WriteLine($"O veículo {placa.ToUpper()} foi removido e o preço total foi de: R$ {valorTotal}");
                         veiculos.Remove(placa);
                     }
                     else
                     {
                         Console.WriteLine("Desculpe, esse veículo não está estacionado aqui. Confira se digitou a placa corretamente");
                     }
-            }
-            else
-            {
-                Console.WriteLine("Não há veículos estacionados.");
-            }            
+                    break;
+
+                    default:
+                    Console.WriteLine("Não há veículos estacionados.");
+                    break;
+            }          
         }
 
         public void ListarVeiculos()
