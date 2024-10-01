@@ -36,3 +36,6 @@ Por último, deverá ser feito um menu interativo com as seguintes ações imple
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Nota da Aluna
+Ao rodar o código, percebi que, se nenhum veículo estivesse cadastrado e selecionasse opção de remover veículo, ele rodava normalmente pedindo a placa e o tempo em que ele esteve lá. Implementei uma verificação para que nesse caso, o programa retorne a seguinte mensagem "Não há veículos estacionados." utilizando o switch case. Alterei algumas mensagens que para mim faziam mais sentido.
